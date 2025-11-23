@@ -1,0 +1,524 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recursos — Water</title>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen bg-neutral-900 text-white antialiased" style="font-family: 'Google Sans', sans-serif;">
+  <div class="overflow-hidden relative">
+    <!-- Nav -->
+    <header class="fixed top-0 left-0 right-0 z-50 floating-header">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex items-center justify-between py-5">
+
+          <!-- Recursos y Sobre Mí (Derecha) -->
+          <div class="flex-1 flex justify-end">
+            <nav class="flex items-center gap-6">
+              <a class="text-sm text-white/80 hover:text-white transition font-geist" href="recursos.html">
+                Recursos
+              </a>
+              <a class="text-sm text-white/80 hover:text-white transition font-geist" href="sobre-mi.html">
+                Sobre mí
+              </a>
+            </nav>
+          </div>
+
+          <!-- Logo (Centro) -->
+          <div class="flex-1 flex justify-center">
+            <a href="index.html" class="flex items-center gap-2">
+              <img src="img/logo.svg" alt="Water Logo" class="w-[80px] h-8 object-cover rounded">
+            </a>
+          </div>
+
+
+
+          <!-- Botón Reservar Plaza (Izquierda) -->
+          <div class="flex-1 flex justify-start">
+            <a href="reservar-plaza.html"
+              class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-4 py-2.5 text-sm font-medium hover:bg-white/10 transition font-geist">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+                <path d="m10 17 5-5-5-5"></path>
+                <path d="M15 12H3"></path>
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              </svg>
+              Reservar plaza
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="sm:pt-14 mb-[100px] pt-24 relative hero-no-glow">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="xl:ml-auto xl:mr-auto xl:mt-20 xl:mb-16 text-center max-w-3xl mt-20 mr-auto mb-16 ml-auto">
+          <div
+            class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full px-3 py-1.5 text-[13px]"
+            style="background-color: rgba(99, 156, 224, 0.1); color: rgba(99, 156, 224, 0.8);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              class="h-3.5 w-3.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span class="font-geist">
+              Biblioteca de recursos
+            </span>
+          </div>
+          <h1 class="sm:text-6xl md:text-7xl text-5xl font-medium tracking-tight font-geist mt-5">
+            Recursos para impulsar tu
+            <span class="lg:italic font-medium font-instrument-serif" style="color: #639CE0;">
+              carrera profesional
+            </span>
+          </h1>
+          <p class="mt-5 text-lg sm:text-xl text-white/70 font-geist">
+            Herramientas, guías y contenido seleccionado para ayudarte en cada etapa de tu desarrollo profesional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recursos por Categoría -->
+    <section class="sm:px-6 sm:ml-auto sm:mr-auto sm:mb-40 max-w-7xl mt-10 mr-auto mb-16 ml-auto px-4">
+      <!-- Guías y Artículos -->
+      <div class="mb-16">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 rounded-full" style="background-color: #639CE0;"></div>
+          <h2 class="text-3xl sm:text-4xl font-medium tracking-tight font-geist">
+            Guías y Artículos
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="group overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6 hover:bg-white/10 transition">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                style="background-color: rgba(99, 156, 224, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold tracking-tight text-white font-geist mb-2">
+                  Cómo crear un CV que genere entrevistas
+                </h3>
+                <p class="text-sm text-white/60 font-geist leading-relaxed mb-4">
+                  Guía completa para destacar tu valor profesional y atraer oportunidades.
+                </p>
+                <a href="#" class="text-sm font-medium font-geist inline-flex items-center gap-1"
+                  style="color: #639CE0;">
+                  Leer más
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6 hover:bg-white/10 transition">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                style="background-color: rgba(99, 156, 224, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold tracking-tight text-white font-geist mb-2">
+                  Construir tu marca personal en LinkedIn
+                </h3>
+                <p class="text-sm text-white/60 font-geist leading-relaxed mb-4">
+                  Estrategias para posicionarte como profesional y generar oportunidades.
+                </p>
+                <a href="#" class="text-sm font-medium font-geist inline-flex items-center gap-1"
+                  style="color: #639CE0;">
+                  Leer más
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6 hover:bg-white/10 transition">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                style="background-color: rgba(99, 156, 224, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold tracking-tight text-white font-geist mb-2">
+                  Técnicas de networking efectivo
+                </h3>
+                <p class="text-sm text-white/60 font-geist leading-relaxed mb-4">
+                  Aprende a construir relaciones profesionales que impulsen tu carrera.
+                </p>
+                <a href="#" class="text-sm font-medium font-geist inline-flex items-center gap-1"
+                  style="color: #639CE0;">
+                  Leer más
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6 hover:bg-white/10 transition">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                style="background-color: rgba(99, 156, 224, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold tracking-tight text-white font-geist mb-2">
+                  Cómo negociar tu salario con confianza
+                </h3>
+                <p class="text-sm text-white/60 font-geist leading-relaxed mb-4">
+                  Guía práctica para negociar condiciones laborales que reflejen tu valor.
+                </p>
+                <a href="#" class="text-sm font-medium font-geist inline-flex items-center gap-1"
+                  style="color: #639CE0;">
+                  Leer más
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6 hover:bg-white/10 transition">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                style="background-color: rgba(99, 156, 224, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold tracking-tight text-white font-geist mb-2">
+                  Estrategias para cambiar de industria
+                </h3>
+                <p class="text-sm text-white/60 font-geist leading-relaxed mb-4">
+                  Pasos concretos para hacer la transición profesional que buscas.
+                </p>
+                <a href="#" class="text-sm font-medium font-geist inline-flex items-center gap-1"
+                  style="color: #639CE0;">
+                  Leer más
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6 hover:bg-white/10 transition">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                style="background-color: rgba(99, 156, 224, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold tracking-tight text-white font-geist mb-2">
+                  Preparación para entrevistas de trabajo
+                </h3>
+                <p class="text-sm text-white/60 font-geist leading-relaxed mb-4">
+                  Todo lo que necesitas saber para destacar en tus entrevistas.
+                </p>
+                <a href="#" class="text-sm font-medium font-geist inline-flex items-center gap-1"
+                  style="color: #639CE0;">
+                  Leer más
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Plantillas y Herramientas -->
+      <div class="mb-16">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 rounded-full" style="background-color: #639CE0;"></div>
+          <h2 class="text-3xl sm:text-4xl font-medium tracking-tight font-geist">
+            Plantillas y Herramientas
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="group overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6 hover:bg-white/10 transition">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                style="background-color: rgba(99, 156, 224, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold tracking-tight text-white font-geist mb-2">
+                  Plantilla de CV profesional
+                </h3>
+                <p class="text-sm text-white/60 font-geist leading-relaxed mb-4">
+                  Descarga una plantilla optimizada para ATS y reclutadores.
+                </p>
+                <a href="#" class="text-sm font-medium font-geist inline-flex items-center gap-1"
+                  style="color: #639CE0;">
+                  Descargar
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6 hover:bg-white/10 transition">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                style="background-color: rgba(99, 156, 224, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                  <line x1="3" x2="21" y1="9" y2="9"></line>
+                  <line x1="9" x2="9" y1="21" y2="9"></line>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold tracking-tight text-white font-geist mb-2">
+                  Checklist de búsqueda de empleo
+                </h3>
+                <p class="text-sm text-white/60 font-geist leading-relaxed mb-4">
+                  Lista de verificación para mantenerte organizado en tu búsqueda.
+                </p>
+                <a href="#" class="text-sm font-medium font-geist inline-flex items-center gap-1"
+                  style="color: #639CE0;">
+                  Descargar
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6 hover:bg-white/10 transition">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                style="background-color: rgba(99, 156, 224, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  <line x1="9" y1="10" x2="15" y2="10"></line>
+                  <line x1="12" y1="7" x2="12" y2="13"></line>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold tracking-tight text-white font-geist mb-2">
+                  Guía de preguntas para entrevistas
+                </h3>
+                <p class="text-sm text-white/60 font-geist leading-relaxed mb-4">
+                  Preguntas comunes y cómo responderlas de manera efectiva.
+                </p>
+                <a href="#" class="text-sm font-medium font-geist inline-flex items-center gap-1"
+                  style="color: #639CE0;">
+                  Descargar
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Videos y Webinars -->
+      <div class="mb-16">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 rounded-full" style="background-color: #639CE0;"></div>
+          <h2 class="text-3xl sm:text-4xl font-medium tracking-tight font-geist">
+            Videos y Webinars
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article class="group overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl overflow-hidden hover:bg-white/10 transition">
+            <div class="relative w-full" style="padding-bottom: 56.25%;">
+              <div class="absolute inset-0 bg-gradient-to-b from-neutral-800 to-neutral-900 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-12 h-12">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold tracking-tight text-white font-geist mb-2">
+                Webinar: Cómo destacar en tu búsqueda de empleo
+              </h3>
+              <p class="text-sm text-white/60 font-geist leading-relaxed">
+                Sesión completa con estrategias prácticas para encontrar tu próximo trabajo.
+              </p>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl overflow-hidden hover:bg-white/10 transition">
+            <div class="relative w-full" style="padding-bottom: 56.25%;">
+              <div class="absolute inset-0 bg-gradient-to-b from-neutral-800 to-neutral-900 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-12 h-12">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold tracking-tight text-white font-geist mb-2">
+                Masterclass: Construcción de marca personal
+              </h3>
+              <p class="text-sm text-white/60 font-geist leading-relaxed">
+                Aprende a construir y posicionar tu marca personal profesional.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="sm:px-6 sm:ml-auto sm:mr-auto sm:mt-40 sm:mb-40 max-w-7xl mt-16 mr-auto mb-16 ml-auto px-4">
+      <div
+        class="relative overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-[40px] rounded-[40px]">
+        <div class="absolute inset-0"
+          style="background: radial-gradient(800px 400px at 50% 50%, rgba(99, 156, 224, 0.15), transparent 70%);">
+        </div>
+        <div class="absolute -top-16 -right-10 h-72 w-72 rounded-full blur-3xl pointer-events-none"
+          style="background-color: rgba(99, 156, 224, 0.1);">
+        </div>
+        <div class="absolute -bottom-20 -left-10 h-80 w-80 rounded-full blur-3xl pointer-events-none"
+          style="background-color: rgba(99, 156, 224, 0.1);">
+        </div>
+        <div class="relative z-10 sm:p-16 pt-12 pr-8 pb-12 pl-8 text-center">
+          <span
+            class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full px-3 py-1.5 text-xs font-geist"
+            style="background-color: rgba(99, 156, 224, 0.1); color: rgba(99, 156, 224, 0.8);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              class="h-3.5 w-3.5">
+              <path
+                d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z">
+              </path>
+              <path d="M20 2v4"></path>
+              <path d="M22 4h-4"></path>
+              <circle cx="4" cy="20" r="2"></circle>
+            </svg>
+            ¿Listo para impulsar tu carrera?
+          </span>
+          <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl tracking-tight font-geist font-medium text-white">
+            Únete a nuestro programa de desarrollo profesional
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-white/70 max-w-2xl mx-auto font-geist">
+            Obtén acceso a recursos exclusivos, mentoría personalizada y una comunidad de profesionales.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+            <a href="index.html#contact"
+              class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-black transition font-geist shadow-lg"
+              style="background-color: #639CE0; box-shadow: 0 10px 15px -3px rgba(99, 156, 224, 0.25), 0 4px 6px -2px rgba(99, 156, 224, 0.25);"
+              onmouseover="this.style.backgroundColor='#7aade3'" onmouseout="this.style.backgroundColor='#639CE0'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+                <path d="M12 5v14"></path>
+                <path d="M5 12h14"></path>
+              </svg>
+              Reservar plaza
+            </a>
+            <a href="index.html"
+              class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-6 py-3 text-sm font-medium hover:bg-white/10 transition font-geist">
+              Conocer más
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,349 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reservar Plaza — Proyecto Talento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen bg-neutral-900 text-white antialiased" style="font-family: 'Google Sans', sans-serif;">
+  <div class="overflow-hidden relative">
+    <!-- Nav -->
+    <header class="fixed top-0 left-0 right-0 z-50 floating-header">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex items-center justify-between py-5">
+
+          <!-- Recursos y Sobre Mí (Derecha) -->
+          <div class="flex-1 flex justify-end">
+            <nav class="flex items-center gap-6">
+              <a class="text-sm text-white/80 hover:text-white transition font-geist" href="recursos.html">
+                Recursos
+              </a>
+              <a class="text-sm text-white/80 hover:text-white transition font-geist" href="sobre-mi.html">
+                Sobre mí
+              </a>
+            </nav>
+          </div>
+
+          <!-- Logo (Centro) -->
+          <div class="flex-1 flex justify-center">
+            <a href="index.html" class="flex items-center gap-2">
+              <img src="img/logo.svg" alt="Water Logo" class="w-[80px] h-8 object-cover rounded">
+            </a>
+          </div>
+
+
+
+          <!-- Botón Reservar Plaza (Izquierda) -->
+          <div class="flex-1 flex justify-start">
+            <a href="reservar-plaza.html"
+              class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-4 py-2.5 text-sm font-medium hover:bg-white/10 transition font-geist">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+                <path d="m10 17 5-5-5-5"></path>
+                <path d="M15 12H3"></path>
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              </svg>
+              Reservar plaza
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="sm:pt-14 mb-[100px] pt-24 relative hero-no-glow">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="xl:ml-auto xl:mr-auto xl:mt-20 xl:mb-16 text-center max-w-3xl mt-20 mr-auto mb-16 ml-auto">
+          <div
+            class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full px-3 py-1.5 text-[13px]"
+            style="background-color: rgba(99, 156, 224, 0.1); color: rgba(99, 156, 224, 0.8);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              class="h-3.5 w-3.5">
+              <path
+                d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z">
+              </path>
+              <path d="M20 2v4"></path>
+              <path d="M22 4h-4"></path>
+              <circle cx="4" cy="20" r="2"></circle>
+            </svg>
+            <span class="font-geist">
+              Únete al programa
+            </span>
+          </div>
+          <h1 class="sm:text-6xl md:text-7xl text-5xl font-medium tracking-tight font-geist mt-5">
+            Reserva tu plaza y comienza tu
+            <span class="lg:italic font-medium font-instrument-serif" style="color: #639CE0;">
+              transformación profesional
+            </span>
+          </h1>
+          <p class="mt-5 text-lg sm:text-xl text-white/70 font-geist">
+            Completa el formulario y te contactaremos para iniciar tu camino hacia el éxito profesional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de Reserva -->
+    <section class="sm:px-6 sm:ml-auto sm:mr-auto sm:mb-40 max-w-7xl mt-10 mr-auto mb-16 ml-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Información -->
+        <div class="lg:col-span-1 space-y-6">
+          <div class="bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6">
+            <h3 class="text-xl font-medium tracking-tight font-geist mb-4">
+              ¿Qué incluye el programa?
+            </h3>
+            <ul class="space-y-3 text-sm text-white/80 font-geist">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span>Mentoría personalizada y sesiones individuales</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span>Herramientas y recursos exclusivos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span>Plantillas de CV y LinkedIn optimizadas</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span>Estrategias de networking y búsqueda</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span>Preparación para entrevistas</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span>Acompañamiento continuo durante todo el proceso</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6">
+            <h3 class="text-lg font-medium tracking-tight font-geist mb-3">
+              Próximos pasos
+            </h3>
+            <div class="space-y-3 text-sm text-white/70 font-geist">
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium"
+                  style="background-color: rgba(99, 156, 224, 0.1); color: #639CE0;">1</span>
+                <span>Completa el formulario con tus datos</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium"
+                  style="background-color: rgba(99, 156, 224, 0.1); color: #639CE0;">2</span>
+                <span>Te contactaremos en menos de 24 horas</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium"
+                  style="background-color: rgba(99, 156, 224, 0.1); color: #639CE0;">3</span>
+                <span>Agendamos una sesión inicial para conocerte</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium"
+                  style="background-color: rgba(99, 156, 224, 0.1); color: #639CE0;">4</span>
+                <span>Comienza tu transformación profesional</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="lg:col-span-2">
+          <div class="bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-6 sm:p-8">
+            <h2 class="text-2xl font-medium tracking-tight font-geist mb-6">
+              Formulario de reserva
+            </h2>
+            <form class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="nombre" class="block text-sm font-medium text-white/80 mb-2 font-geist">
+                    Nombre completo *
+                  </label>
+                  <input id="nombre" name="nombre" type="text" required
+                    placeholder="María García"
+                    class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-3 pr-4 pb-3 pl-4 font-geist"
+                    style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
+                    onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                    onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-white/80 mb-2 font-geist">
+                    Email *
+                  </label>
+                  <input id="email" name="email" type="email" required
+                    placeholder="maria@ejemplo.com"
+                    class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-3 pr-4 pb-3 pl-4 font-geist"
+                    style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
+                    onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                    onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="telefono" class="block text-sm font-medium text-white/80 mb-2 font-geist">
+                    Teléfono *
+                  </label>
+                  <input id="telefono" name="telefono" type="tel" required
+                    placeholder="+34 600 000 000"
+                    class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-3 pr-4 pb-3 pl-4 font-geist"
+                    style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
+                    onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                    onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
+                </div>
+                <div>
+                  <label for="situacion" class="block text-sm font-medium text-white/80 mb-2 font-geist">
+                    Situación actual *
+                  </label>
+                  <select id="situacion" name="situacion" required
+                    class="w-full appearance-none outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-3 pr-4 pb-3 pl-4 font-geist"
+                    style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
+                    onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                    onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
+                    <option class="bg-neutral-900" value="">Selecciona una opción</option>
+                    <option class="bg-neutral-900" value="estudiante">Estudiante o recién graduado</option>
+                    <option class="bg-neutral-900" value="empleado">Empleado buscando cambio</option>
+                    <option class="bg-neutral-900" value="transicion">En transición profesional</option>
+                    <option class="bg-neutral-900" value="desempleado">Desempleado</option>
+                    <option class="bg-neutral-900" value="emprendedor">Emprendedor</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="objetivo" class="block text-sm font-medium text-white/80 mb-2 font-geist">
+                  ¿Cuál es tu objetivo profesional principal? *
+                </label>
+                <textarea id="objetivo" name="objetivo" rows="3" required
+                  placeholder="Ejemplo: Quiero cambiar de industria y encontrar un puesto en marketing digital..."
+                  class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-3 pr-4 pb-3 pl-4 font-geist"
+                  style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
+                  onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                  onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'"></textarea>
+              </div>
+
+              <div>
+                <label for="mensaje" class="block text-sm font-medium text-white/80 mb-2 font-geist">
+                  Mensaje adicional (opcional)
+                </label>
+                <textarea id="mensaje" name="mensaje" rows="4"
+                  placeholder="Cuéntame más sobre tu situación, desafíos o cualquier información que consideres relevante..."
+                  class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-3 pr-4 pb-3 pl-4 font-geist"
+                  style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
+                  onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                  onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'"></textarea>
+              </div>
+
+              <div class="flex items-start gap-3 pt-2">
+                <input id="privacidad" name="privacidad" type="checkbox" required
+                  class="mt-1 w-4 h-4 rounded border-white/20 bg-white/10 text-[#639CE0] focus:ring-2 focus:ring-[#639CE0]"
+                  style="accent-color: #639CE0;">
+                <label for="privacidad" class="text-sm text-white/70 font-geist">
+                  Acepto la política de privacidad y el tratamiento de mis datos personales *
+                </label>
+              </div>
+
+              <button type="submit"
+                class="w-full inline-flex items-center justify-center gap-2 rounded-xl px-6 py-4 text-sm font-medium text-black transition font-geist shadow-lg"
+                style="background-color: #639CE0; box-shadow: 0 10px 15px -3px rgba(99, 156, 224, 0.25), 0 4px 6px -2px rgba(99, 156, 224, 0.25);"
+                onmouseover="this.style.backgroundColor='#7aade3'" onmouseout="this.style.backgroundColor='#639CE0'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 2 11 13"></path>
+                  <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                </svg>
+                Enviar solicitud de reserva
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="sm:px-6 sm:ml-auto sm:mr-auto sm:mt-40 sm:mb-40 max-w-7xl mt-16 mr-auto mb-16 ml-auto px-4">
+      <div
+        class="relative overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-[40px] rounded-[40px]">
+        <div class="absolute inset-0"
+          style="background: radial-gradient(800px 400px at 50% 50%, rgba(99, 156, 224, 0.15), transparent 70%);">
+        </div>
+        <div class="absolute -top-16 -right-10 h-72 w-72 rounded-full blur-3xl pointer-events-none"
+          style="background-color: rgba(99, 156, 224, 0.1);">
+        </div>
+        <div class="absolute -bottom-20 -left-10 h-80 w-80 rounded-full blur-3xl pointer-events-none"
+          style="background-color: rgba(99, 156, 224, 0.1);">
+        </div>
+        <div class="relative z-10 sm:p-16 pt-12 pr-8 pb-12 pl-8 text-center">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl tracking-tight font-geist font-medium text-white">
+            ¿Tienes preguntas?
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-white/70 max-w-2xl mx-auto font-geist">
+            Si prefieres hablar antes de reservar, contáctame directamente y estaré encantado de resolver tus dudas.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+            <a href="mailto:contacto@hrsconultoria.io"
+              class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-black transition font-geist shadow-lg"
+              style="background-color: #639CE0; box-shadow: 0 10px 15px -3px rgba(99, 156, 224, 0.25), 0 4px 6px -2px rgba(99, 156, 224, 0.25);"
+              onmouseover="this.style.backgroundColor='#7aade3'" onmouseout="this.style.backgroundColor='#639CE0'">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              </svg>
+              Enviar email
+            </a>
+            <a href="index.html"
+              class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-6 py-3 text-sm font-medium hover:bg-white/10 transition font-geist">
+              Volver al inicio
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+
+</html>
+
+
+
+
+
