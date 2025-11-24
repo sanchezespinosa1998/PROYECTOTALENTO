@@ -4,6 +4,33 @@ body {
     color: #fff;
 }
 
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(6px);
+    animation: fadeSlideIn 0.9s ease-out forwards;
+    animation-play-state: paused;
+    animation-delay: var(--aos-delay, 0s);
+}
+
+.animate-on-scroll.animate {
+    animation-play-state: running;
+}
+
 ::selection {
     background-color: #56A9ED;
     color: #041221;
@@ -33,6 +60,26 @@ section::before {
 section>* {
     position: relative;
     z-index: 1;
+}
+
+/* Brillos azules laterales específicos del hero */
+.hero-glow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background:
+        linear-gradient(90deg, rgba(86, 169, 237, 0.5) 0%, rgba(86, 169, 237, 0.25) 1%, transparent 15%),
+        linear-gradient(270deg, rgba(86, 169, 237, 0.5) 0%, rgba(86, 169, 237, 0.25) 1%, transparent 15%);
+    filter: blur(18px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-glow::before {
+    display: none;
 }
 
 /* Eliminar brillo azul del hero en páginas específicas */

@@ -43,12 +43,12 @@
     </header>
 
     <!-- Hero -->
-    <section class="sm:pt-14 mb-[100px] pt-24 relative">
+    <section class="sm:pt-14 mb-[100px] pt-24 relative hero-glow">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="xl:ml-auto xl:mr-auto xl:mt-20 xl:mb-28 text-center max-w-4xl mt-20 mr-auto mb-28 ml-auto">
           <div
-            class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full px-3 py-1.5 text-[13px]"
-            style="background-color: rgba(86, 169, 237, 0.1); color: rgba(86, 169, 237, 0.8);">
+            class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full px-3 py-1.5 text-[13px] animate-on-scroll"
+            style="background-color: rgba(86, 169, 237, 0.1); color: rgba(86, 169, 237, 0.8); --aos-delay: 0s;">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
               class="h-3.5 w-3.5">
@@ -64,18 +64,21 @@
             </span>
           </div>
           <h1
-            class="hero-title text-6xl sm:text-7xl md:text-8xl font-medium tracking-tight font-geist mt-5 leading-tight">
+            class="hero-title text-6xl sm:text-7xl md:text-8xl font-medium tracking-tight font-geist mt-5 leading-tight animate-on-scroll"
+            style="--aos-delay: 0.12s;">
             Impulsa tu carrera profesional hacia el
             <span class="lg:italic font-medium font-instrument-serif" style="color: #56A9ED;">
               éxito que mereces
             </span>
           </h1>
-          <p class="mt-5 text-xl sm:text-2xl text-white/70 font-geist max-w-4xl mx-auto">
+          <p class="mt-5 text-xl sm:text-2xl text-white/70 font-geist max-w-4xl mx-auto animate-on-scroll"
+            style="--aos-delay: 0.22s;">
             Obtén la dirección, claridad y resultados que necesitas para avanzar
             en tu carrera. Un programa diseñado para darte las herramientas y el
             apoyo necesario para alcanzar tus objetivos profesionales.
           </p>
-          <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-5">
+          <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-5 animate-on-scroll"
+            style="--aos-delay: 0.32s;">
             <div class="ios-switch" role="group" aria-label="Disponibilidad inmediata">
               <input type="checkbox" id="ios-switch-hero" class="ios-switch__input">
               <label class="ios-switch__track" for="ios-switch-hero">
@@ -1355,6 +1358,22 @@
             heroSection.style.removeProperty('--floating-menu-offset');
           }
         });
+      }
+
+      const animatedElements = document.querySelectorAll('.animate-on-scroll');
+      if (animatedElements.length && 'IntersectionObserver' in window) {
+        const animationObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+
+        animatedElements.forEach((el) => animationObserver.observe(el));
+      } else {
+        animatedElements.forEach((el) => el.classList.add('animate'));
       }
     });
   </script>
