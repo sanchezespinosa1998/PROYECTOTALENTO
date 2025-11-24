@@ -1,4 +1,4 @@
-<html lang="en">
+﻿<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -18,55 +18,37 @@
     <!-- Background -->
 
     <!-- Nav -->
-    <header class="fixed top-0 left-0 right-0 z-50 floating-header">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="flex items-center justify-between py-5">
-
-          <!-- Recursos y Sobre Mí (Derecha) -->
-          <div class="flex-1 flex justify-end">
-            <nav class="flex items-center gap-6">
-              <a class="text-sm text-white/80 hover:text-white transition font-geist" href="recursos.html">
-                Recursos
-              </a>
-              <a class="text-sm text-white/80 hover:text-white transition font-geist" href="sobre-mi.html">
-                Sobre mí
-              </a>
-            </nav>
-          </div>
-
-          <!-- Logo (Centro) -->
-          <div class="flex-1 flex justify-center">
-            <a href="index.html" class="flex items-center gap-2">
-              <img src="img/logo.svg" alt="Water Logo" class="w-[120px] h-15 object-cover rounded">
-            </a>
-          </div>
-
-
-
-          <!-- Botón Reservar Plaza (Izquierda) -->
-          <div class="flex-1 flex justify-start">
-            <a href="reservar-plaza.html"
-              class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-4 py-2.5 text-sm font-medium hover:bg-white/10 transition font-geist">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
-                <path d="m10 17 5-5-5-5"></path>
-                <path d="M15 12H3"></path>
-                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-              </svg>
-              Reservar plaza
-            </a>
-          </div>
-        </div>
+    <header class="floating-menu" aria-label="Navegación principal">
+      <div class="floating-menu__content">
+        <a href="index.html" class="floating-menu__logo" aria-label="Inicio">
+          <img src="img/logo.svg" alt="Water Logo" class="w-[100px] h-12 object-contain">
+        </a>
+        <a href="reservar-plaza.html" class="floating-menu__cta">
+          Reservar plaza
+        </a>
+        <button id="nav-floating-toggle" class="floating-menu__toggle" aria-expanded="false"
+          aria-controls="floating-menu-panel" aria-label="Abrir menú">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
+      <nav id="floating-menu-panel" class="floating-menu__panel hidden" aria-label="Opciones del menú">
+        <a href="recursos.html">Recursos</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+      </nav>
     </header>
 
     <!-- Hero -->
     <section class="sm:pt-14 mb-[100px] pt-24 relative">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="xl:ml-auto xl:mr-auto xl:mt-20 xl:mb-28 text-center max-w-3xl mt-20 mr-auto mb-28 ml-auto">
+        <div class="xl:ml-auto xl:mr-auto xl:mt-20 xl:mb-28 text-center max-w-4xl mt-20 mr-auto mb-28 ml-auto">
           <div
             class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full px-3 py-1.5 text-[13px]"
-            style="background-color: rgba(99, 156, 224, 0.1); color: rgba(99, 156, 224, 0.8);">
+            style="background-color: rgba(86, 169, 237, 0.1); color: rgba(86, 169, 237, 0.8);">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
               class="h-3.5 w-3.5">
@@ -81,36 +63,25 @@
               Programa de desarrollo profesional
             </span>
           </div>
-          <h1 class="sm:text-6xl md:text-7xl text-5xl font-medium tracking-tight font-geist mt-5">
+          <h1
+            class="hero-title text-6xl sm:text-7xl md:text-8xl font-medium tracking-tight font-geist mt-5 leading-tight">
             Impulsa tu carrera profesional hacia el
-            <span class="lg:italic font-medium font-instrument-serif" style="color: #639CE0;">
+            <span class="lg:italic font-medium font-instrument-serif" style="color: #56A9ED;">
               éxito que mereces
             </span>
           </h1>
-          <p class="mt-5 text-lg sm:text-xl text-white/70 font-geist">
+          <p class="mt-5 text-xl sm:text-2xl text-white/70 font-geist max-w-4xl mx-auto">
             Obtén la dirección, claridad y resultados que necesitas para avanzar
             en tu carrera. Un programa diseñado para darte las herramientas y el
             apoyo necesario para alcanzar tus objetivos profesionales.
           </p>
-          <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-            <div class="btn-wrapper">
-              <button class="btn px-10 py-3 focus:outline-none" type="button" aria-label="Quiero impulsar mi carrera">
-                <svg class="btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-                  aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z">
-                  </path>
-                </svg>
-                <span class="btn-label">Quiero impulsar mi carrera</span>
-              </button>
-            </div>
-
-            <div class="inline-block group text-sm rounded-full relative">
-
-              <span
-                class="pointer-events-none absolute -bottom-3 left-1/2 z-0 h-6 w-44 -translate-x-1/2 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 rounded-full text-sm"
-                style="background: radial-gradient(60% 100% at 50% 50%, rgba(255,255,255,.55), rgba(255,255,255,.28) 35%, transparent 70%); filter: blur(10px) saturate(120%);"
-                aria-hidden="true"></span>
+          <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-5">
+            <div class="ios-switch" role="group" aria-label="Disponibilidad inmediata">
+              <input type="checkbox" id="ios-switch-hero" class="ios-switch__input">
+              <label class="ios-switch__track" for="ios-switch-hero">
+                <span class="ios-switch__text">quiero encender mi carrera</span>
+                <span class="ios-switch__thumb" aria-hidden="true"></span>
+              </label>
             </div>
           </div>
         </div>
@@ -175,7 +146,7 @@
       <div class="mx-auto max-w-4xl text-center">
         <span
           class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-xs font-medium font-geist"
-          style="background-color: rgba(99, 156, 224, 0.1); color: rgba(99, 156, 224, 0.8);">
+          style="background-color: rgba(86, 169, 237, 0.1); color: rgba(86, 169, 237, 0.8);">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -417,16 +388,16 @@
               <div class="hidden sm:flex flex-col gap-4 relative text-neutral-300 bg-transparent pr-4 pl-4">
                 <div class="relative">
                   <div class="absolute left-2 top-8 bottom-0 w-px"
-                    style="background: linear-gradient(to bottom, #639CE0, rgba(99, 156, 224, 0.6), rgba(99, 156, 224, 0.3));">
+                    style="background: linear-gradient(to bottom, #56A9ED, rgba(86, 169, 237, 0.6), rgba(86, 169, 237, 0.3));">
                   </div>
                   <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-4 h-4 z-10 relative bg-black border-2 rounded-full mt-0.5"
-                      style="border-color: #639CE0;">
+                      style="border-color: #56A9ED;">
                       <div class="w-1.5 h-1.5 absolute top-0.5 left-0.5 rounded-full"
-                        style="background-color: #639CE0;"></div>
+                        style="background-color: #56A9ED;"></div>
                     </div>
                     <div class="flex-1 pb-6">
-                      <span class="text-sm font-medium font-geist" style="color: #639CE0;">
+                      <span class="text-sm font-medium font-geist" style="color: #56A9ED;">
                         Estudiantes y recién graduados
                       </span>
                       <p class="text-xs text-white/60 mt-1 font-geist">
@@ -437,16 +408,16 @@
                 </div>
                 <div class="relative">
                   <div class="absolute left-2 top-8 bottom-0 w-px"
-                    style="background: linear-gradient(to bottom, #639CE0, rgba(99, 156, 224, 0.6), rgba(99, 156, 224, 0.3));">
+                    style="background: linear-gradient(to bottom, #56A9ED, rgba(86, 169, 237, 0.6), rgba(86, 169, 237, 0.3));">
                   </div>
                   <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-4 h-4 rounded-full border-2 bg-black z-10 relative mt-0.5"
-                      style="border-color: #639CE0;">
+                      style="border-color: #56A9ED;">
                       <div class="w-1.5 h-1.5 rounded-full absolute top-0.5 left-0.5"
-                        style="background-color: #639CE0;"></div>
+                        style="background-color: #56A9ED;"></div>
                     </div>
                     <div class="flex-1 pb-6">
-                      <span class="text-sm font-medium font-geist" style="color: #639CE0;">
+                      <span class="text-sm font-medium font-geist" style="color: #56A9ED;">
                         Profesionales en transición
                       </span>
                       <p class="text-xs text-white/60 mt-1 font-geist">
@@ -457,16 +428,16 @@
                 </div>
                 <div class="relative">
                   <div class="absolute left-2 top-8 bottom-0 w-px"
-                    style="background: linear-gradient(to bottom, #639CE0, rgba(99, 156, 224, 0.6), rgba(99, 156, 224, 0.3));">
+                    style="background: linear-gradient(to bottom, #56A9ED, rgba(86, 169, 237, 0.6), rgba(86, 169, 237, 0.3));">
                   </div>
                   <div class="flex gap-4 items-start">
                     <div class="flex-shrink-0 w-4 h-4 rounded-full border-2 bg-black z-10 relative mt-0.5"
-                      style="border-color: #639CE0;">
+                      style="border-color: #56A9ED;">
                       <div class="w-1.5 h-1.5 rounded-full absolute top-0.5 left-0.5"
-                        style="background-color: #639CE0;"></div>
+                        style="background-color: #56A9ED;"></div>
                     </div>
                     <div class="flex-1 pb-6">
-                      <span class="text-sm font-medium font-geist" style="color: #639CE0;">
+                      <span class="text-sm font-medium font-geist" style="color: #56A9ED;">
                         Personas en transición
                       </span>
                       <p class="text-xs text-white/60 mt-1 font-geist">
@@ -478,12 +449,12 @@
                 <div class="relative">
                   <div class="flex items-start gap-4">
                     <div class="flex-shrink-0 w-4 h-4 rounded-full border-2 bg-black z-10 relative mt-0.5"
-                      style="border-color: #639CE0;">
+                      style="border-color: #56A9ED;">
                       <div class="w-1.5 h-1.5 rounded-full absolute top-0.5 left-0.5"
-                        style="background-color: #639CE0;"></div>
+                        style="background-color: #56A9ED;"></div>
                     </div>
                     <div class="flex-1">
-                      <span class="text-sm font-medium font-geist" style="color: #639CE0;">
+                      <span class="text-sm font-medium font-geist" style="color: #56A9ED;">
                         Quien busca estrategia y claridad
                       </span>
                       <p class="text-xs text-white/60 mt-1 font-geist">
@@ -506,8 +477,8 @@
               </p>
               <a href="#contact"
                 class="inline-flex items-center justify-center gap-2 h-10 transition text-sm font-medium text-black rounded-full mt-4 px-4 max-w-sm font-geist"
-                style="background-color: #639CE0;" onmouseover="this.style.backgroundColor='#7aade3'"
-                onmouseout="this.style.backgroundColor='#639CE0'">
+                style="background-color: #56A9ED;" onmouseover="this.style.backgroundColor='#7aade3'"
+                onmouseout="this.style.backgroundColor='#56A9ED'">
                 Conocer más
                 <span class="inline-flex h-2 w-2 rounded-full bg-black"></span>
               </a>
@@ -644,9 +615,9 @@
             <article class="group overflow-hidden bg-neutral-900/90 border border-white/10 rounded-xl p-6">
               <div class="flex items-start gap-4">
                 <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
+                  style="background-color: rgba(86, 169, 237, 0.1);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                    stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                     <polyline points="14 2 14 8 20 8"></polyline>
                     <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -667,9 +638,9 @@
             <article class="group overflow-hidden bg-neutral-900/90 border border-white/10 rounded-xl p-6">
               <div class="flex items-start gap-4">
                 <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
+                  style="background-color: rgba(86, 169, 237, 0.1);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                    stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                     <circle cx="12" cy="12" r="10"></circle>
                     <line x1="12" y1="8" x2="12" y2="12"></line>
                     <line x1="12" y1="16" x2="12.01" y2="16"></line>
@@ -688,9 +659,9 @@
             <article class="group overflow-hidden bg-neutral-900/90 border border-white/10 rounded-xl p-6">
               <div class="flex items-start gap-4">
                 <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
+                  style="background-color: rgba(86, 169, 237, 0.1);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                    stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                     <circle cx="12" cy="10" r="3"></circle>
                   </svg>
@@ -708,9 +679,9 @@
             <article class="group overflow-hidden bg-neutral-900/90 border border-white/10 rounded-xl p-6">
               <div class="flex items-start gap-4">
                 <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
+                  style="background-color: rgba(86, 169, 237, 0.1);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                    stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
@@ -728,9 +699,9 @@
             <article class="group overflow-hidden bg-neutral-900/90 border border-white/10 rounded-xl p-6">
               <div class="flex items-start gap-4">
                 <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
+                  style="background-color: rgba(86, 169, 237, 0.1);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                    stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                     <circle cx="9" cy="7" r="4"></circle>
                     <path d="M23 21v-2a4 4 0 0 0-3-3"></path>
@@ -750,9 +721,9 @@
             <article class="group overflow-hidden bg-neutral-900/90 border border-white/10 rounded-xl p-6">
               <div class="flex items-start gap-4">
                 <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
+                  style="background-color: rgba(86, 169, 237, 0.1);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                    stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     <line x1="9" y1="10" x2="15" y2="10"></line>
                     <line x1="12" y1="7" x2="12" y2="13"></line>
@@ -772,9 +743,9 @@
               class="group overflow-hidden bg-neutral-900/90 border border-white/10 rounded-xl p-6 md:col-span-2">
               <div class="flex items-start gap-4">
                 <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
+                  style="background-color: rgba(86, 169, 237, 0.1);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                    stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                     <circle cx="9" cy="7" r="4"></circle>
                     <path d="M23 21v-2a4 4 0 0 0-3-3"></path>
@@ -800,13 +771,13 @@
       <div
         class="relative overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-[40px] rounded-[40px]">
         <div class="absolute inset-0"
-          style="background: radial-gradient(800px 400px at 50% 50%, rgba(99, 156, 224, 0.15), transparent 70%);">
+          style="background: radial-gradient(800px 400px at 50% 50%, rgba(86, 169, 237, 0.15), transparent 70%);">
         </div>
         <div class="absolute -top-16 -right-10 h-72 w-72 rounded-full blur-3xl pointer-events-none"
-          style="background-color: rgba(99, 156, 224, 0.1);">
+          style="background-color: rgba(86, 169, 237, 0.1);">
         </div>
         <div class="absolute -bottom-20 -left-10 h-80 w-80 rounded-full blur-3xl pointer-events-none"
-          style="background-color: rgba(99, 156, 224, 0.1);">
+          style="background-color: rgba(86, 169, 237, 0.1);">
         </div>
         <div class="relative z-10 sm:p-16 pt-12 pr-8 pb-12 pl-8">
           <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
@@ -844,8 +815,8 @@
               <div class="mt-8 flex flex-col sm:flex-row items-start justify-start gap-3.5">
                 <a href="#contact"
                   class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-black transition font-geist shadow-lg"
-                  style="background-color: #639CE0; box-shadow: 0 10px 15px -3px rgba(99, 156, 224, 0.25), 0 4px 6px -2px rgba(99, 156, 224, 0.25);"
-                  onmouseover="this.style.backgroundColor='#7aade3'" onmouseout="this.style.backgroundColor='#639CE0'">
+                  style="background-color: #56A9ED; box-shadow: 0 10px 15px -3px rgba(86, 169, 237, 0.25), 0 4px 6px -2px rgba(86, 169, 237, 0.25);"
+                  onmouseover="this.style.backgroundColor='#7aade3'" onmouseout="this.style.backgroundColor='#56A9ED'">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                     class="h-4 w-4">
@@ -896,8 +867,8 @@
               <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div class="space-y-4">
                   <div class="inline-flex items-center gap-2 rounded-full ring-1 px-2.5 py-1 text-xs font-geist"
-                    style="background-color: rgba(99, 156, 224, 0.1); color: #639CE0; border-color: rgba(99, 156, 224, 0.2);">
-                    <span class="h-1.5 w-1.5 rounded-full animate-pulse" style="background-color: #639CE0;"></span>
+                    style="background-color: rgba(86, 169, 237, 0.1); color: #56A9ED; border-color: rgba(86, 169, 237, 0.2);">
+                    <span class="h-1.5 w-1.5 rounded-full animate-pulse" style="background-color: #56A9ED;"></span>
                     Disponible para ayudarte
                   </div>
                   <h4 class="text-white font-medium tracking-tight font-geist">
@@ -907,7 +878,7 @@
                     <li class="flex items-start gap-2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                        class="w-4 h-4 mt-0.5" style="color: #639CE0;">
+                        class="w-4 h-4 mt-0.5" style="color: #56A9ED;">
                         <path d="M20 6 9 17l-5-5"></path>
                       </svg>
                       <span class="font-geist">
@@ -917,7 +888,7 @@
                     <li class="flex items-start gap-2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                        class="w-4 h-4 mt-0.5" style="color: #639CE0;">
+                        class="w-4 h-4 mt-0.5" style="color: #56A9ED;">
                         <path d="M20 6 9 17l-5-5"></path>
                       </svg>
                       <span class="font-geist">
@@ -927,7 +898,7 @@
                     <li class="flex items-start gap-2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                        class="w-4 h-4 mt-0.5" style="color: #639CE0;">
+                        class="w-4 h-4 mt-0.5" style="color: #56A9ED;">
                         <path d="M20 6 9 17l-5-5"></path>
                       </svg>
                       <span class="font-geist">
@@ -938,7 +909,7 @@
                   <div class="flex items-center gap-3 pt-2 text-sm">
                     <a href="mailto:contacto@water.io"
                       class="inline-flex items-center gap-2 text-white transition font-geist"
-                      onmouseover="this.style.color='#639CE0'" onmouseout="this.style.color='white'">
+                      onmouseover="this.style.color='#56A9ED'" onmouseout="this.style.color='white'">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                         class="w-4 h-4">
@@ -956,8 +927,8 @@
                     </label>
                     <input id="name" name="name" type="text" required="" placeholder="María García"
                       class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3 font-geist"
-                      style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
-                      onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                      style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
+                      onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
                       onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
                   </div>
                   <div class="sm:col-span-1">
@@ -966,8 +937,8 @@
                     </label>
                     <input id="email" name="email" type="email" required="" placeholder="maria@ejemplo.com"
                       class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3 font-geist"
-                      style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
-                      onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                      style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
+                      onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
                       onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
                   </div>
                   <div class="sm:col-span-1">
@@ -976,8 +947,8 @@
                     </label>
                     <input id="company" name="company" type="text" placeholder="Empresa S.L."
                       class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3 font-geist"
-                      style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
-                      onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                      style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
+                      onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
                       onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
                   </div>
                   <div class="sm:col-span-1">
@@ -986,8 +957,8 @@
                     </label>
                     <select id="interest" name="interest"
                       class="w-full appearance-none outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3 font-geist"
-                      style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
-                      onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                      style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
+                      onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
                       onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
                       <option class="bg-black" value="programa">
                         Información sobre el programa
@@ -1010,16 +981,16 @@
                     <textarea id="message" name="message" rows="4"
                       placeholder="Cuéntame sobre tus objetivos profesionales y cómo puedo ayudarte..."
                       class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3 font-geist"
-                      style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
-                      onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                      style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
+                      onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
                       onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'"></textarea>
                   </div>
                   <div class="sm:col-span-2 flex items-center justify-end">
                     <button type="submit"
                       class="inline-flex gap-2 ring-1 transition text-sm font-medium text-black rounded-xl pt-2.5 pr-4 pb-2.5 pl-4 shadow items-center font-geist"
-                      style="background-color: #639CE0; border-color: #639CE0;"
+                      style="background-color: #56A9ED; border-color: #56A9ED;"
                       onmouseover="this.style.backgroundColor='#7aade3'; this.style.borderColor='#7aade3'"
-                      onmouseout="this.style.backgroundColor='#639CE0'; this.style.borderColor='#639CE0'">
+                      onmouseout="this.style.backgroundColor='#56A9ED'; this.style.borderColor='#56A9ED'">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                         class="w-4 h-4">
@@ -1132,13 +1103,13 @@
                 </svg>
                 <input type="email" name="subscribeEmail" required="" placeholder="you@example.com"
                   class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-xs text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-9 font-geist"
-                  style="--tw-ring-color: rgba(99, 156, 224, 0.6);"
-                  onfocus="this.style.borderColor='#639CE0'; this.style.boxShadow='0 0 0 2px rgba(99, 156, 224, 0.6)'"
+                  style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
+                  onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
                   onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
               </div>
               <button type="submit"
                 class="inline-flex gap-2 ring-1 ring-white/80 transition text-xs font-medium text-black bg-white rounded-xl pt-2.5 pr-3.5 pb-2.5 pl-3.5 items-center font-geist"
-                onmouseover="this.style.backgroundColor='#639CE0'; this.style.borderColor='#639CE0'"
+                onmouseover="this.style.backgroundColor='#56A9ED'; this.style.borderColor='#56A9ED'"
                 onmouseout="this.style.backgroundColor='white'; this.style.borderColor='rgba(255, 255, 255, 0.8)'">
                 Join
               </button>
@@ -1201,12 +1172,192 @@
         </div>
       </div>
       <div aria-hidden="true" class="pointer-events-none absolute -top-16 -right-10 h-72 w-72 rounded-full blur-3xl"
-        style="background-color: rgba(99, 156, 224, 0.1);"></div>
+        style="background-color: rgba(86, 169, 237, 0.1);"></div>
       <div aria-hidden="true" class="pointer-events-none absolute -bottom-20 -left-10 h-80 w-80 rounded-full blur-3xl"
-        style="background-color: rgba(99, 156, 224, 0.1);"></div>
+        style="background-color: rgba(86, 169, 237, 0.1);"></div>
     </div>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const heroSwitch = document.getElementById('ios-switch-hero');
+      const heroTrack = heroSwitch?.nextElementSibling;
+      const heroThumb = heroTrack?.querySelector('.ios-switch__thumb');
+      const navToggle = document.getElementById('nav-floating-toggle');
+      const navPanel = document.getElementById('floating-menu-panel');
+      const heroSection = document.querySelector('section');
+
+      if (heroSwitch && heroTrack && heroThumb) {
+        let isLaunchingWhatsapp = false;
+        const animationDelayMs = 450;
+        const whatsappUrl = 'https://wa.me/34663410222';
+
+        heroSwitch.checked = false;
+
+        const launchWhatsapp = () => {
+          window.open(whatsappUrl, '_blank');
+        };
+
+        heroSwitch.addEventListener('change', (event) => {
+          if (!event.target.checked || isLaunchingWhatsapp) return;
+          isLaunchingWhatsapp = true;
+
+          setTimeout(() => {
+            launchWhatsapp();
+            isLaunchingWhatsapp = false;
+          }, animationDelayMs);
+        });
+
+        const initDragBehavior = () => {
+          const dragState = {
+            active: false,
+            startChecked: false,
+            pointerId: null,
+            lastClientX: null,
+            currentLeft: null,
+            previewChecked: false,
+            startClientX: null,
+            hasMoved: false,
+            suppressClick: false
+          };
+          const gutterPx = 10;
+
+          const updateTrackFill = (ratio) => {
+            const clamped = Math.min(1, Math.max(0, ratio));
+            heroTrack.style.setProperty('--ios-switch-fill-ratio', clamped.toFixed(3));
+            heroTrack.classList.toggle('is-preview-on', clamped >= 0.5);
+            dragState.previewChecked = clamped >= 0.5;
+          };
+
+          const updateThumbPosition = (clientX) => {
+            if (!dragState.active || typeof clientX !== 'number') return;
+            dragState.lastClientX = clientX;
+
+            const rect = heroTrack.getBoundingClientRect();
+            const thumbWidth = heroThumb.offsetWidth;
+            const min = gutterPx;
+            const max = rect.width - thumbWidth - gutterPx;
+            const rawLeft = clientX - rect.left - thumbWidth / 2;
+            const nextLeft = Math.max(min, Math.min(rawLeft, max));
+
+            heroThumb.style.left = `${nextLeft}px`;
+            dragState.currentLeft = nextLeft;
+
+            const thumbCenter = nextLeft + thumbWidth / 2;
+            const usableWidth = rect.width - thumbWidth - gutterPx * 2;
+            const ratio = usableWidth <= 0 ? 0 : (thumbCenter - (thumbWidth / 2 + gutterPx)) / usableWidth;
+            updateTrackFill(ratio);
+          };
+
+          const finalizeDragState = () => {
+            heroTrack.classList.remove('is-dragging', 'is-preview-on');
+            heroThumb.classList.remove('is-dragging');
+            heroThumb.style.left = '';
+
+            dragState.active = false;
+            dragState.pointerId = null;
+            dragState.currentLeft = null;
+            dragState.lastClientX = null;
+            dragState.startClientX = null;
+          };
+
+          const endDrag = (event) => {
+            if (!dragState.active) return;
+
+            const clientX = typeof event?.clientX === 'number' ? event.clientX : dragState.lastClientX;
+            if (typeof clientX === 'number') {
+              updateThumbPosition(clientX);
+            }
+
+            if (dragState.pointerId !== null && heroThumb.hasPointerCapture(dragState.pointerId)) {
+              heroThumb.releasePointerCapture(dragState.pointerId);
+            }
+
+            const finalChecked = Boolean(dragState.previewChecked);
+            const shouldEmitChange = finalChecked !== dragState.startChecked;
+
+            heroSwitch.checked = finalChecked;
+            heroTrack.style.setProperty('--ios-switch-fill-ratio', finalChecked ? '1' : '0');
+            dragState.suppressClick = dragState.hasMoved;
+            finalizeDragState();
+            dragState.hasMoved = false;
+
+            if (dragState.suppressClick) {
+              setTimeout(() => {
+                dragState.suppressClick = false;
+              }, 0);
+            }
+
+            if (shouldEmitChange) {
+              heroSwitch.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+          };
+
+          heroThumb.addEventListener('pointerdown', (event) => {
+            if (event.button !== 0) return;
+
+            event.preventDefault();
+            dragState.active = true;
+            dragState.startChecked = heroSwitch.checked;
+            dragState.pointerId = event.pointerId;
+            dragState.previewChecked = heroSwitch.checked;
+            dragState.lastClientX = event.clientX;
+            dragState.startClientX = event.clientX;
+            dragState.hasMoved = false;
+
+            heroTrack.classList.add('is-dragging');
+            heroThumb.classList.add('is-dragging');
+
+            heroThumb.setPointerCapture(event.pointerId);
+            updateThumbPosition(event.clientX);
+            updateTrackFill(dragState.previewChecked ? 1 : 0);
+          });
+
+          heroThumb.addEventListener('pointermove', (event) => {
+            if (!dragState.active) return;
+            if (typeof event.clientX === 'number' && typeof dragState.startClientX === 'number') {
+              if (!dragState.hasMoved && Math.abs(event.clientX - dragState.startClientX) > 2) {
+                dragState.hasMoved = true;
+              }
+            }
+            updateThumbPosition(event.clientX);
+          });
+
+          heroThumb.addEventListener('pointerup', endDrag);
+          heroThumb.addEventListener('pointercancel', endDrag);
+          heroThumb.addEventListener('lostpointercapture', endDrag);
+
+          heroTrack.addEventListener('click', (event) => {
+            if (dragState.suppressClick) {
+              event.preventDefault();
+              event.stopPropagation();
+              dragState.suppressClick = false;
+            }
+          }, true);
+        };
+
+        initDragBehavior();
+      }
+
+      if (navToggle && navPanel && heroSection) {
+        navToggle.addEventListener('click', () => {
+          const isHidden = navPanel.classList.toggle('hidden');
+          navToggle.setAttribute('aria-expanded', (!isHidden).toString());
+          if (!isHidden) {
+            heroSection.style.setProperty('--floating-menu-offset', `${navPanel.offsetHeight + 40}px`);
+          }
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!navPanel.contains(event.target) && !navToggle.contains(event.target)) {
+            navPanel.classList.add('hidden');
+            navToggle.setAttribute('aria-expanded', 'false');
+            heroSection.style.removeProperty('--floating-menu-offset');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

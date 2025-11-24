@@ -1,4 +1,4 @@
-<html lang="es">
+﻿<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -13,46 +13,28 @@
 <body class="min-h-screen bg-neutral-900 text-white antialiased" style="font-family: 'Google Sans', sans-serif;">
   <div class="overflow-hidden relative">
     <!-- Nav -->
-    <header class="fixed top-0 left-0 right-0 z-50 floating-header">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="flex items-center justify-between py-5">
-
-          <!-- Recursos y Sobre Mí (Derecha) -->
-          <div class="flex-1 flex justify-end">
-            <nav class="flex items-center gap-6">
-              <a class="text-sm text-white/80 hover:text-white transition font-geist" href="recursos.html">
-                Recursos
-              </a>
-              <a class="text-sm text-white/80 hover:text-white transition font-geist" href="sobre-mi.html">
-                Sobre mí
-              </a>
-            </nav>
-          </div>
-
-          <!-- Logo (Centro) -->
-          <div class="flex-1 flex justify-center">
-            <a href="index.html" class="flex items-center gap-2">
-              <img src="img/logo.svg" alt="Water Logo" class="w-[80px] h-8 object-cover rounded">
-            </a>
-          </div>
-
-
-
-          <!-- Botón Reservar Plaza (Izquierda) -->
-          <div class="flex-1 flex justify-start">
-            <a href="reservar-plaza.html"
-              class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-4 py-2.5 text-sm font-medium hover:bg-white/10 transition font-geist">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
-                <path d="m10 17 5-5-5-5"></path>
-                <path d="M15 12H3"></path>
-                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-              </svg>
-              Reservar plaza
-            </a>
-          </div>
-        </div>
+    <header class="floating-menu" aria-label="Navegación principal">
+      <div class="floating-menu__content">
+        <a href="index.html" class="floating-menu__logo" aria-label="Inicio">
+          <img src="img/logo.svg" alt="Water Logo" class="w-[100px] h-12 object-contain">
+        </a>
+        <a href="reservar-plaza.html" class="floating-menu__cta">
+          Reservar plaza
+        </a>
+        <button id="nav-floating-toggle" class="floating-menu__toggle" aria-expanded="false"
+          aria-controls="floating-menu-panel" aria-label="Abrir menú">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
+      <nav id="floating-menu-panel" class="floating-menu__panel hidden" aria-label="Opciones del menú">
+        <a href="recursos.html">Recursos</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+      </nav>
     </header>
 
     <!-- Hero -->
@@ -61,7 +43,7 @@
         <div class="xl:ml-auto xl:mr-auto xl:mt-20 xl:mb-16 text-center max-w-3xl mt-20 mr-auto mb-16 ml-auto">
           <div
             class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full px-3 py-1.5 text-[13px]"
-            style="background-color: rgba(99, 156, 224, 0.1); color: rgba(99, 156, 224, 0.8);">
+            style="background-color: rgba(86, 169, 237, 0.1); color: rgba(86, 169, 237, 0.8);">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
               class="h-3.5 w-3.5">
@@ -74,9 +56,9 @@
               Conoce a tu mentor
             </span>
           </div>
-          <h1 class="sm:text-6xl md:text-7xl text-5xl font-medium tracking-tight font-geist mt-5">
+          <h1 class="hero-title sm:text-6xl md:text-7xl text-5xl font-medium tracking-tight font-geist mt-5">
             Tu guía hacia el
-            <span class="lg:italic font-medium font-instrument-serif" style="color: #639CE0;">
+            <span class="lg:italic font-medium font-instrument-serif" style="color: #56A9ED;">
               éxito profesional
             </span>
           </h1>
@@ -98,9 +80,9 @@
               <img src="img/israel.jpg" alt="Israel" class="w-full h-full object-cover">
             </div>
             <div class="absolute -bottom-6 -right-6 w-24 h-24 rounded-full overflow-hidden border-4 border-neutral-900 shadow-2xl">
-              <div class="w-full h-full flex items-center justify-center" style="background-color: rgba(99, 156, 224, 0.2);">
+              <div class="w-full h-full flex items-center justify-center" style="background-color: rgba(86, 169, 237, 0.2);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
                   <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -113,9 +95,9 @@
           <div class="pt-8 space-y-4">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-full flex items-center justify-center"
-                style="background-color: rgba(99, 156, 224, 0.1);">
+                style="background-color: rgba(86, 169, 237, 0.1);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
@@ -128,9 +110,9 @@
 
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-full flex items-center justify-center"
-                style="background-color: rgba(99, 156, 224, 0.1);">
+                style="background-color: rgba(86, 169, 237, 0.1);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
@@ -143,9 +125,9 @@
 
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-full flex items-center justify-center"
-                style="background-color: rgba(99, 156, 224, 0.1);">
+                style="background-color: rgba(86, 169, 237, 0.1);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
                   <path d="M23 21v-2a4 4 0 0 0-3-3"></path>
@@ -192,8 +174,8 @@
             <div class="space-y-4">
               <div class="flex gap-4">
                 <div class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-1"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
-                  <div class="w-2 h-2 rounded-full" style="background-color: #639CE0;"></div>
+                  style="background-color: rgba(86, 169, 237, 0.1);">
+                  <div class="w-2 h-2 rounded-full" style="background-color: #56A9ED;"></div>
                 </div>
                 <div>
                   <h4 class="font-medium font-geist mb-1">Enfoque personalizado</h4>
@@ -206,8 +188,8 @@
 
               <div class="flex gap-4">
                 <div class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-1"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
-                  <div class="w-2 h-2 rounded-full" style="background-color: #639CE0;"></div>
+                  style="background-color: rgba(86, 169, 237, 0.1);">
+                  <div class="w-2 h-2 rounded-full" style="background-color: #56A9ED;"></div>
                 </div>
                 <div>
                   <h4 class="font-medium font-geist mb-1">Resultados medibles</h4>
@@ -220,8 +202,8 @@
 
               <div class="flex gap-4">
                 <div class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-1"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
-                  <div class="w-2 h-2 rounded-full" style="background-color: #639CE0;"></div>
+                  style="background-color: rgba(86, 169, 237, 0.1);">
+                  <div class="w-2 h-2 rounded-full" style="background-color: #56A9ED;"></div>
                 </div>
                 <div>
                   <h4 class="font-medium font-geist mb-1">Acompañamiento continuo</h4>
@@ -241,9 +223,9 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-4">
                 <div class="w-8 h-8 rounded-full flex items-center justify-center mb-3"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
+                  style="background-color: rgba(86, 169, 237, 0.1);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
@@ -255,9 +237,9 @@
 
               <div class="bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-4">
                 <div class="w-8 h-8 rounded-full flex items-center justify-center mb-3"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
+                  style="background-color: rgba(86, 169, 237, 0.1);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
@@ -269,9 +251,9 @@
 
               <div class="bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-4">
                 <div class="w-8 h-8 rounded-full flex items-center justify-center mb-3"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
+                  style="background-color: rgba(86, 169, 237, 0.1);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
@@ -283,9 +265,9 @@
 
               <div class="bg-white/5 backdrop-blur-xl border-gradient before:rounded-xl rounded-xl p-4">
                 <div class="w-8 h-8 rounded-full flex items-center justify-center mb-3"
-                  style="background-color: rgba(99, 156, 224, 0.1);">
+                  style="background-color: rgba(86, 169, 237, 0.1);">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="#639CE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    stroke="#56A9ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
@@ -305,18 +287,18 @@
       <div
         class="relative overflow-hidden bg-white/5 backdrop-blur-xl border-gradient before:rounded-[40px] rounded-[40px]">
         <div class="absolute inset-0"
-          style="background: radial-gradient(800px 400px at 50% 50%, rgba(99, 156, 224, 0.15), transparent 70%);">
+          style="background: radial-gradient(800px 400px at 50% 50%, rgba(86, 169, 237, 0.15), transparent 70%);">
         </div>
         <div class="absolute -top-16 -right-10 h-72 w-72 rounded-full blur-3xl pointer-events-none"
-          style="background-color: rgba(99, 156, 224, 0.1);">
+          style="background-color: rgba(86, 169, 237, 0.1);">
         </div>
         <div class="absolute -bottom-20 -left-10 h-80 w-80 rounded-full blur-3xl pointer-events-none"
-          style="background-color: rgba(99, 156, 224, 0.1);">
+          style="background-color: rgba(86, 169, 237, 0.1);">
         </div>
         <div class="relative z-10 sm:p-16 pt-12 pr-8 pb-12 pl-8 text-center">
           <span
             class="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full px-3 py-1.5 text-xs font-geist"
-            style="background-color: rgba(99, 156, 224, 0.1); color: rgba(99, 156, 224, 0.8);">
+            style="background-color: rgba(86, 169, 237, 0.1); color: rgba(86, 169, 237, 0.8);">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
               class="h-3.5 w-3.5">
@@ -338,8 +320,8 @@
           <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <a href="index.html#contact"
               class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-black transition font-geist shadow-lg"
-              style="background-color: #639CE0; box-shadow: 0 10px 15px -3px rgba(99, 156, 224, 0.25), 0 4px 6px -2px rgba(99, 156, 224, 0.25);"
-              onmouseover="this.style.backgroundColor='#7aade3'" onmouseout="this.style.backgroundColor='#639CE0'">
+              style="background-color: #56A9ED; box-shadow: 0 10px 15px -3px rgba(86, 169, 237, 0.25), 0 4px 6px -2px rgba(86, 169, 237, 0.25);"
+              onmouseover="this.style.backgroundColor='#7aade3'" onmouseout="this.style.backgroundColor='#56A9ED'">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
                 <path d="M12 5v14"></path>
@@ -368,7 +350,189 @@
     lucide.createIcons();
   </script>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const heroSwitch = document.getElementById('ios-switch-hero');
+      const heroTrack = heroSwitch?.nextElementSibling;
+      const heroThumb = heroTrack?.querySelector('.ios-switch__thumb');
+      const navToggle = document.getElementById('nav-floating-toggle');
+      const navPanel = document.getElementById('floating-menu-panel');
+      const heroSection = document.querySelector('section');
+
+      if (heroSwitch && heroTrack && heroThumb) {
+        let isLaunchingWhatsapp = false;
+        const animationDelayMs = 450;
+        const whatsappUrl = 'https://wa.me/34663410222';
+
+        heroSwitch.checked = false;
+
+        const launchWhatsapp = () => {
+          window.open(whatsappUrl, '_blank');
+        };
+
+        heroSwitch.addEventListener('change', (event) => {
+          if (!event.target.checked || isLaunchingWhatsapp) return;
+          isLaunchingWhatsapp = true;
+
+          setTimeout(() => {
+            launchWhatsapp();
+            isLaunchingWhatsapp = false;
+          }, animationDelayMs);
+        });
+
+        const initDragBehavior = () => {
+          const dragState = {
+            active: false,
+            startChecked: false,
+            pointerId: null,
+            lastClientX: null,
+            currentLeft: null,
+            previewChecked: false,
+            startClientX: null,
+            hasMoved: false,
+            suppressClick: false
+          };
+          const gutterPx = 10;
+
+          const updateTrackFill = (ratio) => {
+            const clamped = Math.min(1, Math.max(0, ratio));
+            heroTrack.style.setProperty('--ios-switch-fill-ratio', clamped.toFixed(3));
+            heroTrack.classList.toggle('is-preview-on', clamped >= 0.5);
+            dragState.previewChecked = clamped >= 0.5;
+          };
+
+          const updateThumbPosition = (clientX) => {
+            if (!dragState.active || typeof clientX !== 'number') return;
+            dragState.lastClientX = clientX;
+
+            const rect = heroTrack.getBoundingClientRect();
+            const thumbWidth = heroThumb.offsetWidth;
+            const min = gutterPx;
+            const max = rect.width - thumbWidth - gutterPx;
+            const rawLeft = clientX - rect.left - thumbWidth / 2;
+            const nextLeft = Math.max(min, Math.min(rawLeft, max));
+
+            heroThumb.style.left = `${nextLeft}px`;
+            dragState.currentLeft = nextLeft;
+
+            const thumbCenter = nextLeft + thumbWidth / 2;
+            const usableWidth = rect.width - thumbWidth - gutterPx * 2;
+            const ratio = usableWidth <= 0 ? 0 : (thumbCenter - (thumbWidth / 2 + gutterPx)) / usableWidth;
+            updateTrackFill(ratio);
+          };
+
+          const finalizeDragState = () => {
+            heroTrack.classList.remove('is-dragging', 'is-preview-on');
+            heroThumb.classList.remove('is-dragging');
+            heroThumb.style.left = '';
+
+            dragState.active = false;
+            dragState.pointerId = null;
+            dragState.currentLeft = null;
+            dragState.lastClientX = null;
+            dragState.startClientX = null;
+          };
+
+          const endDrag = (event) => {
+            if (!dragState.active) return;
+
+            const clientX = typeof event?.clientX === 'number' ? event.clientX : dragState.lastClientX;
+            if (typeof clientX === 'number') {
+              updateThumbPosition(clientX);
+            }
+
+            if (dragState.pointerId !== null && heroThumb.hasPointerCapture(dragState.pointerId)) {
+              heroThumb.releasePointerCapture(dragState.pointerId);
+            }
+
+            const finalChecked = Boolean(dragState.previewChecked);
+            const shouldEmitChange = finalChecked !== dragState.startChecked;
+
+            heroSwitch.checked = finalChecked;
+            heroTrack.style.setProperty('--ios-switch-fill-ratio', finalChecked ? '1' : '0');
+            dragState.suppressClick = dragState.hasMoved;
+            finalizeDragState();
+            dragState.hasMoved = false;
+
+            if (dragState.suppressClick) {
+              setTimeout(() => {
+                dragState.suppressClick = false;
+              }, 0);
+            }
+
+            if (shouldEmitChange) {
+              heroSwitch.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+          };
+
+          heroThumb.addEventListener('pointerdown', (event) => {
+            if (event.button !== 0) return;
+
+            event.preventDefault();
+            dragState.active = true;
+            dragState.startChecked = heroSwitch.checked;
+            dragState.pointerId = event.pointerId;
+            dragState.previewChecked = heroSwitch.checked;
+            dragState.lastClientX = event.clientX;
+            dragState.startClientX = event.clientX;
+            dragState.hasMoved = false;
+
+            heroTrack.classList.add('is-dragging');
+            heroThumb.classList.add('is-dragging');
+
+            heroThumb.setPointerCapture(event.pointerId);
+            updateThumbPosition(event.clientX);
+            updateTrackFill(dragState.previewChecked ? 1 : 0);
+          });
+
+          heroThumb.addEventListener('pointermove', (event) => {
+            if (!dragState.active) return;
+            if (typeof event.clientX === 'number' && typeof dragState.startClientX === 'number') {
+              if (!dragState.hasMoved && Math.abs(event.clientX - dragState.startClientX) > 2) {
+                dragState.hasMoved = true;
+              }
+            }
+            updateThumbPosition(event.clientX);
+          });
+
+          heroThumb.addEventListener('pointerup', endDrag);
+          heroThumb.addEventListener('pointercancel', endDrag);
+          heroThumb.addEventListener('lostpointercapture', endDrag);
+
+          heroTrack.addEventListener('click', (event) => {
+            if (dragState.suppressClick) {
+              event.preventDefault();
+              event.stopPropagation();
+              dragState.suppressClick = false;
+            }
+          }, true);
+        };
+
+        initDragBehavior();
+      }
+
+      if (navToggle && navPanel && heroSection) {
+        navToggle.addEventListener('click', () => {
+          const isHidden = navPanel.classList.toggle('hidden');
+          navToggle.setAttribute('aria-expanded', (!isHidden).toString());
+          if (!isHidden) {
+            heroSection.style.setProperty('--floating-menu-offset', `${navPanel.offsetHeight + 40}px`);
+          }
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!navPanel.contains(event.target) && !navToggle.contains(event.target)) {
+            navPanel.classList.add('hidden');
+            navToggle.setAttribute('aria-expanded', 'false');
+            heroSection.style.removeProperty('--floating-menu-offset');
+          }
+        });
+      }
+    });
+  </script>
+
 </body>
 
 </html>
+
 
