@@ -194,6 +194,99 @@ section>* {
     text-wrap: balance;
 }
 
+.timeline {
+    --timeline-progress: 0;
+    --timeline-translate: 0;
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    left: 1.5rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 25%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0));
+    opacity: 0.6;
+    pointer-events: none;
+    transform: translateX(var(--timeline-translate));
+}
+
+.timeline-line--progress {
+    background: linear-gradient(180deg, rgba(86, 169, 237, 0) 0%, rgba(86, 169, 237, 0.8) 15%, rgba(86, 169, 237, 1) 50%, rgba(86, 169, 237, 0.8) 85%, rgba(86, 169, 237, 0));
+    box-shadow: 0 0 48px rgba(86, 169, 237, 1), 0 0 96px rgba(86, 169, 237, 0.8), 0 0 144px rgba(86, 169, 237, 0.5), 0 0 192px rgba(86, 169, 237, 0.3);
+    transform-origin: top;
+    transform: translateX(var(--timeline-translate)) scaleY(var(--timeline-progress));
+    opacity: 1;
+    width: 4px;
+}
+
+.timeline-card {
+    transition: all 0.4s ease;
+}
+
+.timeline-card.timeline-card--illuminated {
+    box-shadow: 0 0 20px rgba(86, 169, 237, 0.4), 0 0 40px rgba(86, 169, 237, 0.2);
+    border-color: rgba(86, 169, 237, 0.3);
+    background: rgba(86, 169, 237, 0.08);
+    transform: scale(1.01);
+}
+
+.timeline-card {
+    width: 100%;
+    max-width: 520px;
+}
+
+.timeline-card--right,
+.timeline-card--left {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-item {
+    position: relative;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-node {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border-radius: 999px;
+    border: 1px solid rgba(86, 169, 237, 0.6);
+    background: rgba(86, 169, 237, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Geist', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: white;
+    z-index: 2;
+    box-shadow: 0 0 14px rgba(86, 169, 237, 0.4);
+    pointer-events: none;
+}
+
+@media (min-width: 640px) {
+    .timeline-line {
+        left: 50%;
+        --timeline-translate: -50%;
+    }
+
+    .timeline-card {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    .timeline-node {
+        left: 50%;
+    }
+}
+
 @media (max-width: 640px) {
     .floating-menu {
         top: 16px;
@@ -606,4 +699,87 @@ section>* {
 
 .ios-switch__track.is-preview-on .ios-switch__thumb {
     box-shadow: 0 9px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* Estilos para transición de contenido en tarjetas de resultados */
+.results-card-title,
+.results-card-text {
+    position: relative;
+    display: block;
+}
+
+.results-card-title-before,
+.results-card-title-after,
+.results-card-text-before,
+.results-card-text-after {
+    display: block;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+}
+
+.results-card-title-before,
+.results-card-text-before {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.results-card-title-after,
+.results-card-text-after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(15px);
+    pointer-events: none;
+}
+
+/* Transición gradual basada en el ratio */
+.results-card[data-switch-ratio] .results-card-title-before,
+.results-card[data-switch-ratio] .results-card-text-before {
+    opacity: calc(1 - var(--switch-ratio, 0));
+    transform: translateY(calc(var(--switch-ratio, 0) * -15px));
+}
+
+.results-card[data-switch-ratio] .results-card-title-after,
+.results-card[data-switch-ratio] .results-card-text-after {
+    opacity: var(--switch-ratio, 0);
+    transform: translateY(calc((1 - var(--switch-ratio, 0)) * 15px));
+    pointer-events: none;
+}
+
+.results-card-title {
+    min-height: 1.75em;
+    position: relative;
+}
+
+.results-card-text {
+    min-height: 3.5em;
+    position: relative;
+}
+
+/* Tinte azul translúcido en las tarjetas cuando el switch está activado */
+.results-card {
+    position: relative;
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.results-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: rgba(86, 169, 237, 0);
+    pointer-events: none;
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.results-card[data-switch-ratio]::before {
+    background-color: rgba(86, 169, 237, calc(var(--switch-ratio, 0) * 0.08));
+}
+
+.results-card > * {
+    position: relative;
+    z-index: 1;
 }

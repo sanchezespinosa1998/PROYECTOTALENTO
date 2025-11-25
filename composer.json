@@ -1,0 +1,10 @@
+{
+    "name": "proyecto-talento/presave-form",
+    "description": "Formulario de pre-reserva con PHPMailer",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
+
+
+

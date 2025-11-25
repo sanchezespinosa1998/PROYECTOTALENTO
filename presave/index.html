@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- 
+  Página de pre-reserva de plaza
+  Configurada para funcionar como index.html en la carpeta presave/
+  Lista para subir a Hostinger
+-->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-reserva tu plaza — Proyecto Talento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Google Sans', sans-serif;
+            background-color: #171717;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Fondo con brillos laterales */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            background:
+                linear-gradient(90deg, rgba(86, 169, 237, 0.5) 0%, rgba(86, 169, 237, 0.25) 1%, transparent 15%),
+                linear-gradient(270deg, rgba(86, 169, 237, 0.5) 0%, rgba(86, 169, 237, 0.25) 1%, transparent 15%);
+            filter: blur(18px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        ::selection {
+            background-color: #56A9ED;
+            color: #041221;
+        }
+
+        /* Logo */
+        .logo-container {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .logo-container img {
+            width: 120px;
+            height: auto;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Encabezado */
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            background-color: rgba(86, 169, 237, 0.1);
+            color: rgba(86, 169, 237, 0.8);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(86, 169, 237, 0.2);
+        }
+
+        .header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .header p {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        /* Formulario */
+        .form-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 0.75rem;
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Google Sans', sans-serif;
+            transition: all 0.2s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #56A9ED;
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 0 3px rgba(86, 169, 237, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #82b7ff, #56A9ED);
+            color: #041221;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(86, 169, 237, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Mensaje de éxito */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(86, 169, 237, 0.1);
+            border: 1px solid rgba(86, 169, 237, 0.3);
+            border-radius: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .success-message svg {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            color: #56A9ED;
+        }
+
+        .success-message h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .success-message p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+
+            .logo-container {
+                margin-bottom: 2rem;
+            }
+
+            .logo-container img {
+                width: 100px;
+            }
+
+            .form-container {
+                padding: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 1.75rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo-container">
+        <img src="logo.svg" alt="Proyecto Talento Logo">
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="badge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z">
+                    </path>
+                </svg>
+                <span>Pre-reserva tu plaza</span>
+            </div>
+            <h1>Reserva tu lugar ahora</h1>
+            <p>Completa el formulario y te contactaremos para confirmar tu plaza en el programa.</p>
+        </div>
+
+        <div class="form-container">
+            <form action="https://formsubmit.co/israelgomezhrs@gmail.com" method="POST">
+                <input type="hidden" name="_next" value="https://proyectotalento.es/">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="name" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje o comentarios</label>
+                    <textarea id="mensaje" name="message"
+                        placeholder="Cuéntanos sobre tus objetivos profesionales o cualquier pregunta que tengas..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Reservar mi plaza</button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <h3>¡Plaza reservada con éxito!</h3>
+                <p>Te contactaremos pronto para confirmar los detalles.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
