@@ -161,7 +161,8 @@
             <h2 class="text-2xl font-medium tracking-tight font-geist mb-6">
               Formulario de reserva
             </h2>
-            <form class="space-y-5">
+            <form id="reserva-form" class="space-y-5">
+              <div id="form-message" class="hidden p-4 rounded-xl font-geist text-sm mb-4"></div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label for="nombre" class="block text-sm font-medium text-white/80 mb-2 font-geist">
@@ -192,30 +193,61 @@
                   <label for="telefono" class="block text-sm font-medium text-white/80 mb-2 font-geist">
                     Teléfono *
                   </label>
-                  <input id="telefono" name="telefono" type="tel" required
-                    placeholder="+34 600 000 000"
+                  <div class="flex gap-2">
+                    <select id="phone-prefix" name="phone-prefix"
+                      class="w-24 appearance-none outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-3 pr-3 pb-3 pl-3 font-geist"
+                      style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
+                      onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
+                      onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
+                      <option class="bg-neutral-900" value="+34">+34</option>
+                      <option class="bg-neutral-900" value="+1">+1</option>
+                      <option class="bg-neutral-900" value="+44">+44</option>
+                      <option class="bg-neutral-900" value="+33">+33</option>
+                      <option class="bg-neutral-900" value="+49">+49</option>
+                      <option class="bg-neutral-900" value="+39">+39</option>
+                      <option class="bg-neutral-900" value="+351">+351</option>
+                      <option class="bg-neutral-900" value="+52">+52</option>
+                      <option class="bg-neutral-900" value="+54">+54</option>
+                      <option class="bg-neutral-900" value="+55">+55</option>
+                      <option class="bg-neutral-900" value="+56">+56</option>
+                      <option class="bg-neutral-900" value="+57">+57</option>
+                    </select>
+                    <input id="telefono" name="telefono" type="tel" required
+                      placeholder="612345678"
+                      class="flex-1 placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-3 pr-4 pb-3 pl-4 font-geist"
+                      style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
+                      onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
+                      onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
+                  </div>
+                </div>
+                <div>
+                  <label for="linkedin" class="block text-sm font-medium text-white/80 mb-2 font-geist">
+                    Perfil de LinkedIn
+                  </label>
+                  <input id="linkedin" name="linkedin" type="url"
+                    placeholder="linkedin.com/in/tu-perfil"
                     class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-3 pr-4 pb-3 pl-4 font-geist"
                     style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
                     onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
                     onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
                 </div>
-                <div>
-                  <label for="situacion" class="block text-sm font-medium text-white/80 mb-2 font-geist">
-                    Situación actual *
-                  </label>
-                  <select id="situacion" name="situacion" required
-                    class="w-full appearance-none outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-3 pr-4 pb-3 pl-4 font-geist"
-                    style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
-                    onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
-                    onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
-                    <option class="bg-neutral-900" value="">Selecciona una opción</option>
-                    <option class="bg-neutral-900" value="estudiante">Estudiante o recién graduado</option>
-                    <option class="bg-neutral-900" value="empleado">Empleado buscando cambio</option>
-                    <option class="bg-neutral-900" value="transicion">En transición profesional</option>
-                    <option class="bg-neutral-900" value="desempleado">Desempleado</option>
-                    <option class="bg-neutral-900" value="emprendedor">Emprendedor</option>
-                  </select>
-                </div>
+              </div>
+
+              <div>
+                <label for="situacion" class="block text-sm font-medium text-white/80 mb-2 font-geist">
+                  Situación Actual *
+                </label>
+                <select id="situacion" name="situacion" required
+                  class="w-full appearance-none outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-3 pr-4 pb-3 pl-4 font-geist"
+                  style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
+                  onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
+                  onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
+                  <option class="bg-neutral-900" value="">Selecciona tu situación</option>
+                  <option class="bg-neutral-900" value="estudiante">Estudiante</option>
+                  <option class="bg-neutral-900" value="recien-graduado">Recién graduado</option>
+                  <option class="bg-neutral-900" value="profesional-activo">Profesional en activo</option>
+                  <option class="bg-neutral-900" value="desempleo">Situación de desempleo</option>
+                </select>
               </div>
 
               <div>
@@ -496,6 +528,67 @@
             navPanel.classList.add('hidden');
             navToggle.setAttribute('aria-expanded', 'false');
             heroSection.style.removeProperty('--floating-menu-offset');
+          }
+        });
+      }
+
+      // Manejo del formulario de reserva
+      const reservaForm = document.getElementById('reserva-form');
+      const formMessage = document.getElementById('form-message');
+      
+      // IMPORTANTE: Reemplaza esta URL con la URL de tu Web App de Google Apps Script
+      const GOOGLE_SCRIPT_URL = 'TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI';
+
+      if (reservaForm) {
+        reservaForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          
+          const submitButton = reservaForm.querySelector('button[type="submit"]');
+          const originalText = submitButton.innerHTML;
+          
+          // Deshabilitar botón y mostrar carga
+          submitButton.disabled = true;
+          submitButton.innerHTML = '<svg class="animate-spin h-5 w-5 inline-block mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Enviando...';
+          
+          // Ocultar mensaje anterior
+          formMessage.classList.add('hidden');
+          
+          // Recopilar datos del formulario
+          const formData = {
+            name: document.getElementById('nombre').value,
+            email: document.getElementById('email').value,
+            'phone-prefix': document.getElementById('phone-prefix').value,
+            telefono: document.getElementById('telefono').value,
+            linkedin: document.getElementById('linkedin').value,
+            situacion: document.getElementById('situacion').value,
+            objetivo: document.getElementById('objetivo').value,
+            mensaje: document.getElementById('mensaje').value,
+            origen: 'Reserva de Plaza'
+          };
+          
+          try {
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData)
+            });
+            
+            // Con no-cors no podemos leer la respuesta, pero asumimos éxito
+            formMessage.classList.remove('hidden');
+            formMessage.className = 'p-4 rounded-xl font-geist text-sm mb-4 bg-green-500/20 border border-green-500/50 text-green-400';
+            formMessage.textContent = '¡Solicitud enviada correctamente! Te contactaremos pronto para confirmar tu plaza.';
+            reservaForm.reset();
+            
+          } catch (error) {
+            formMessage.classList.remove('hidden');
+            formMessage.className = 'p-4 rounded-xl font-geist text-sm mb-4 bg-red-500/20 border border-red-500/50 text-red-400';
+            formMessage.textContent = 'Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.';
+          } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalText;
           }
         });
       }

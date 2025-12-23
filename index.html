@@ -937,10 +937,11 @@
                     </a>
                   </div>
                 </div>
-                <form class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form id="contact-form" class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div id="form-message" class="sm:col-span-2 hidden mb-4 p-4 rounded-xl font-geist text-sm"></div>
                   <div class="sm:col-span-1">
                     <label for="name" class="block text-xs font-medium text-white/80 mb-1 font-geist">
-                      Tu nombre
+                      Nombre
                     </label>
                     <input id="name" name="name" type="text" required="" placeholder="María García"
                       class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3 font-geist"
@@ -959,48 +960,60 @@
                       onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
                   </div>
                   <div class="sm:col-span-1">
-                    <label for="company" class="block text-xs font-medium text-white/80 mb-1 font-geist">
-                      Empresa (opcional)
+                    <label for="phone" class="block text-xs font-medium text-white/80 mb-1 font-geist">
+                      Teléfono
                     </label>
-                    <input id="company" name="company" type="text" placeholder="Empresa S.L."
+                    <div class="flex gap-2">
+                      <select id="phone-prefix" name="phone-prefix"
+                        class="w-24 appearance-none outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3 font-geist"
+                        style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
+                        onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
+                        onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
+                        <option class="bg-black" value="+34">+34</option>
+                        <option class="bg-black" value="+1">+1</option>
+                        <option class="bg-black" value="+44">+44</option>
+                        <option class="bg-black" value="+33">+33</option>
+                        <option class="bg-black" value="+49">+49</option>
+                        <option class="bg-black" value="+39">+39</option>
+                        <option class="bg-black" value="+351">+351</option>
+                        <option class="bg-black" value="+52">+52</option>
+                        <option class="bg-black" value="+54">+54</option>
+                        <option class="bg-black" value="+55">+55</option>
+                        <option class="bg-black" value="+56">+56</option>
+                        <option class="bg-black" value="+57">+57</option>
+                      </select>
+                      <input id="phone" name="phone" type="tel" required="" placeholder="612345678"
+                        class="flex-1 placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3 font-geist"
+                        style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
+                        onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
+                        onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
+                    </div>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label for="linkedin" class="block text-xs font-medium text-white/80 mb-1 font-geist">
+                      Perfil de LinkedIn
+                    </label>
+                    <input id="linkedin" name="linkedin" type="url" placeholder="linkedin.com/in/tu-perfil"
                       class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3 font-geist"
                       style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
                       onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
                       onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
                   </div>
-                  <div class="sm:col-span-1">
-                    <label for="interest" class="block text-xs font-medium text-white/80 mb-1 font-geist">
-                      Estoy interesado en
+                  <div class="sm:col-span-2">
+                    <label for="situation" class="block text-xs font-medium text-white/80 mb-1 font-geist">
+                      Situación Actual
                     </label>
-                    <select id="interest" name="interest"
+                    <select id="situation" name="situation" required=""
                       class="w-full appearance-none outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3 font-geist"
                       style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
                       onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
                       onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'">
-                      <option class="bg-black" value="programa">
-                        Información sobre el programa
-                      </option>
-                      <option class="bg-black" value="reservar">
-                        Reservar una plaza
-                      </option>
-                      <option class="bg-black" value="consulta">
-                        Consulta personalizada
-                      </option>
-                      <option class="bg-black" value="recursos">
-                        Acceso a recursos
-                      </option>
+                      <option class="bg-black" value="">Selecciona tu situación</option>
+                      <option class="bg-black" value="estudiante">Estudiante</option>
+                      <option class="bg-black" value="recien-graduado">Recién graduado</option>
+                      <option class="bg-black" value="profesional-activo">Profesional en activo</option>
+                      <option class="bg-black" value="desempleo">Situación de desempleo</option>
                     </select>
-                  </div>
-                  <div class="sm:col-span-2">
-                    <label for="message" class="block text-xs font-medium text-white/80 mb-1 font-geist">
-                      Mensaje
-                    </label>
-                    <textarea id="message" name="message" rows="4"
-                      placeholder="Cuéntame sobre tus objetivos profesionales y cómo puedo ayudarte..."
-                      class="w-full placeholder-white/40 outline-none focus:ring-2 transition text-sm text-white bg-white/10 border-white/10 border rounded-xl pt-2.5 pr-3 pb-2.5 pl-3 font-geist"
-                      style="--tw-ring-color: rgba(86, 169, 237, 0.6);"
-                      onfocus="this.style.borderColor='#56A9ED'; this.style.boxShadow='0 0 0 2px rgba(86, 169, 237, 0.6)'"
-                      onblur="this.style.borderColor='rgba(255, 255, 255, 0.1)'; this.style.boxShadow='none'"></textarea>
                   </div>
                   <div class="sm:col-span-2 flex items-center justify-end">
                     <button type="submit"
@@ -1618,6 +1631,65 @@
         window.addEventListener('scroll', handleScroll, { passive: true });
         window.addEventListener('resize', updateTimelineProgress);
         updateTimelineProgress();
+      }
+
+      // Manejo del formulario de contacto
+      const contactForm = document.getElementById('contact-form');
+      const formMessage = document.getElementById('form-message');
+
+      // IMPORTANTE: Reemplaza esta URL con la URL de tu Web App de Google Apps Script
+      const GOOGLE_SCRIPT_URL = 'TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI';
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const submitButton = contactForm.querySelector('button[type="submit"]');
+          const originalText = submitButton.innerHTML;
+
+          // Deshabilitar botón y mostrar carga
+          submitButton.disabled = true;
+          submitButton.innerHTML = '<svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Enviando...';
+
+          // Ocultar mensaje anterior
+          formMessage.classList.add('hidden');
+
+          // Recopilar datos del formulario
+          const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            'phone-prefix': document.getElementById('phone-prefix').value,
+            phone: document.getElementById('phone').value,
+            linkedin: document.getElementById('linkedin').value,
+            situation: document.getElementById('situation').value,
+            origen: 'Contacto Principal'
+          };
+
+          try {
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData)
+            });
+
+            // Con no-cors no podemos leer la respuesta, pero asumimos éxito
+            formMessage.classList.remove('hidden');
+            formMessage.className = 'sm:col-span-2 mb-4 p-4 rounded-xl font-geist text-sm bg-green-500/20 border border-green-500/50 text-green-400';
+            formMessage.textContent = '¡Mensaje enviado correctamente! Te contactaremos pronto.';
+            contactForm.reset();
+
+          } catch (error) {
+            formMessage.classList.remove('hidden');
+            formMessage.className = 'sm:col-span-2 mb-4 p-4 rounded-xl font-geist text-sm bg-red-500/20 border border-red-500/50 text-red-400';
+            formMessage.textContent = 'Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.';
+          } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalText;
+          }
+        });
       }
     });
   </script>
